@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="box">
+        <div class="heading"></div>
+        <form class="login-form" [formGroup]="aboutForm" (ngSubmit)="submit()">
+            <div class="field">
+                <app-common [firstControlName]="aboutForm.get(formControlNames.EMAIL)"  [type]="formcontroltypes.EMAIL"   [placeholder]="textPlaceholder" [label]="formLable.EMAIL" ></app-common>
+                </div>
+                
+            <div class="field">
+                <app-common [firstControlName]="aboutForm.get(formControlNames.PASSWORD)"  [type]="formcontroltypes.PASSWORD"   [placeholder]="textPlaceholder" [label]="formLable.PASSWORD" ></app-common>
+            </div>
+            <button type="submit" class="login-button" title="login">Log In</button>
+        </form>
+            <div class="separator">
+                <div class="line"></div>
+                <p>OR</p>
+                <div class="line"></div>
+            </div>
+    </div>
+</div>
